@@ -41,7 +41,7 @@ cacheSolve <- function(cacheObj, ...) {
         return(cached_inverse)
     }
     my_matrix <- cacheObj$get()
-    cached_inverse <- solve(my_matrix, ...)
-    cacheObj$setinverse(cached_inverse)
-    return(cached_inverse)
+    inverse <- solve(my_matrix, ...)
+    cacheObj$setinverse(inverse)
+    return(inverse)
 }
